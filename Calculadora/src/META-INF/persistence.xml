@@ -3,10 +3,7 @@
   <!-- unidade de persistencia com o nome aula -->
   <persistence-unit name="aula">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-    <!-- Aqui são listadas todas as entidades -->
-    <class>br.edu.ifro.modelo.Cliente</class>
-    <class>br.edu.ifro.modelo.Fornecedor</class>
-    <class>br.edu.ifro.modelo.funcionario</class>
+    <class>Model.Historico</class>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <!-- Banco de dados host/database -->

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Views;
+package Control;
 
 import Control.PrincipalController;
 import java.io.IOException;
@@ -25,8 +25,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-import calculadora.Historico;
-import calculadora.Historico;
+import Model.Historico;
+import Model.Historico;
 import java.security.Principal;
 
 /**

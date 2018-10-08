@@ -5,7 +5,40 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.VerController">
-    
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.VerController">
+   <children>
+      <TableView fx:id="tbFuncionario" layoutX="-1.0" prefHeight="229.0" prefWidth="645.0">
+        <columns>
+          <TableColumn prefWidth="59.0" text="id">
+            <cellValueFactory>
+                <PropertyValueFactory property="id" />
+            </cellValueFactory>
+         </TableColumn>
+         <TableColumn prefWidth="156.0" text="Primeiro Valor">
+            <cellValueFactory>
+                <PropertyValueFactory property="primeiroValor" />
+            </cellValueFactory>
+         </TableColumn>
+         <TableColumn prefWidth="166.0" text="Segundo Valor">
+             <cellValueFactory>
+                 <PropertyValueFactory property="segundoValor" />
+             </cellValueFactory>
+        </TableColumn>
+         <TableColumn prefWidth="137.0" text="operador">
+             <cellValueFactory>
+                 <PropertyValueFactory property="operador" />
+             </cellValueFactory>
+        </TableColumn>
+        <TableColumn prefWidth="128.0" text="resultado">
+             <cellValueFactory>
+                 <PropertyValueFactory property="resultado" />
+             </cellValueFactory>
+        </TableColumn>
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cbCalcular" layoutX="293.0" layoutY="250.0" prefWidth="150.0" />
+      <Button fx:id="btnExcluir" layoutX="173.0" layoutY="250.0" mnemonicParsing="false" onAction="#excluir" text="EXCLUIR" />
+   </children>
 </AnchorPane>

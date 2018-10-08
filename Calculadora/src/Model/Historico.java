@@ -1,5 +1,5 @@
 
-package calculadora;
+package Model;
 import java.util.logging.Logger;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Historico {
     @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
     private String primeiroValor;
     private String segundoValor;
     private String operador;
@@ -21,11 +21,11 @@ public class Historico {
        return id + "-" + resultado;
     }
     
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
