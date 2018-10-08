@@ -3,30 +3,53 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package calculadora;
+package Control;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
+ * FXML Controller class
  *
  * @author 54902797291
  */
 public class PrincipalController implements Initializable {
-    
+
     @FXML
-    private TextField txtNumero1,txtNumero2, txtResultado;
+    private Label label;
     @FXML
-    private Button btnSomar, btnDividir, btnSubtrair, btnMultiplicar;
-    
-    
+    private TextField txtNumero1;
     @FXML
+    private TextField txtNumero2;
+    @FXML
+    private TextField txtResultado;
+    @FXML
+    private Button btnSomar;
+    @FXML
+    private Button btnDividir;
+    @FXML
+    private Button btnMultiplicar;
+    @FXML
+    private Button btnSubtrair;
+    @FXML
+    private Button btHistorico;
+
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+ @FXML
     private void Somar(ActionEvent event) {
         Double numl = Double.parseDouble(txtNumero1.getText());
         Double result;
@@ -70,9 +93,18 @@ public class PrincipalController implements Initializable {
         txtResultado.setText(result.toString());
         
     }
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+     
+    @FXML
+    private void historico(ActionEvent event) throws IOException {
+       FXMLLoader fxmlLoader = new FXMLLoader();
+    fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/view/Caixa.fxml"));
+    Scene scene = new Scene(fxmlLoader.load(),670,444);
+    Stage stage = new Stage();
+    stage.setTitle("Caixa");
+    stage.setScene(scene);
+    stage.show();
+    }
+    
+
     
 }
